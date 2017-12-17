@@ -10,18 +10,34 @@ class MyCLI < Thor
 
   desc "hello NAME", "say hello to NAME"
   def repl
-    blah = ['one', 'two', 'three', 'four']
-    blah = blah.map.with_index{ |a, i| [i+1, *a]}
-
+    proctor = Proctor.new
     loop do
-      print_table(blah)
-      meow = ask('what you want?:')
-      puts meow
+      say(proctor.question)
+      print_table(proctor.options)
+      answer = ask("what do you think? >>").to_i
+
+      if answer == 2
+        say("you're a vim winner")
+      else
+        say("unfortunately that is the incorrect answer, please please please try again")
+      end
     end
   end
 end
 
 class Proctor
+  def question
+    "What does h do?"
+  end
+
+  def options
+    option_set = ['goes around', 'moves cursor left', 'executes sys call', 'moves cursor down']
+    prepare_options(option_set)
+  end
+
+  def prepare_options(options)
+    options.map.with_index{ |a, i| [i+1, *a]}
+  end
 end
 
 
