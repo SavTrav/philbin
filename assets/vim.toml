@@ -1,0 +1,13 @@
+[responses]
+success = "You're a vim winner!"
+failure = "Try again and do better!"
+
+[[questions]]
+question = "What does h do?"
+choices = ["goes around", "moves cursor left", "executes sys call", "moves cursor down"]
+correct = 2
+
+[[questions]]
+question = "What does k do?"
+choices = ["goes around", "moves cursor left", "executes sys call", "moves cursor up"]
+correct = 4

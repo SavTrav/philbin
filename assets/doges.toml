@@ -1,0 +1,14 @@
+[responses]
+success = "You are clearly the king/queen of the doge!"
+failure = "Are you a cat person? Wrong!"
+
+[[questions]]
+question = "What breed is the canonical doge?"
+choices = ["golden retriever", "shiba inu", "pug", "poodle"]
+correct = 2
+
+[[questions]]
+question = "What is the best cryptocurrency?"
+choices = ["bitcoin", "ethereum", "dogecoin", "litecoin"]
+correct = 3
+
